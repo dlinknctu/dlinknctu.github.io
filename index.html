@@ -245,7 +245,11 @@ $('#tabAdm a').click(function (e) {
     admChart.resize();
     setData(admTrafficObj,admCloneObj,admChart);
   },100);
-})
+});
+window.onresize = function(event) {
+    admChart.resize();
+    netChart.resize();
+};
 
        
 
