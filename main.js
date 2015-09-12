@@ -219,7 +219,7 @@ function setData(jsonTrafficData,jsonCloneData,myChart) {
                 if(jsonTrafficData == null)
                   return list; 
                 for (i = 0; i < jsonTrafficData.length; i++) {
-                    d = temp + jsonTrafficData[i]["total"];
+                    d = temp + jsonTrafficData[i]["unique"];
                     temp = d;
                     list.push(d);
                 }
@@ -236,7 +236,7 @@ function setData(jsonTrafficData,jsonCloneData,myChart) {
                 if(jsonCloneData == null)
                   return list;
                 for (i = 0; i < jsonCloneData.length; i++) {
-                    d = temp + jsonCloneData[i]["total"];
+                    d = temp + jsonCloneData[i]["unique"];
                     temp = d ;
                     list.push(d);
                 }
