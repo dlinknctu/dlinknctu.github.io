@@ -1,0 +1,17 @@
+.chart{
+        height:300px;
+            padding-top:20px;
+}
+.readme{
+        border-radius: 25px;
+            border: 2px solid #8AC007;
+                padding-top:20px;
+                    margin-top:20px;
+}
+.navbar-inverse {
+        background-color: #28CC79;
+            border-color: #24C373;
+}
+.navbar-inverse .navbar-brand {
+        color: black;
+}

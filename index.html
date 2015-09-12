@@ -3,15 +3,9 @@
 <head>
 <title>WinLab GitHub Statistics</title>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="./style.css">
 </head>
-<style>
-.nav-tabs>li.active>a{
-  color: black;
-  background-color: gray;
-  border: 1px solid gray;
-}
-</style>
-<body style="background-color:#292929">
+<body>
 <nav class="navbar navbar-inverse">
   <div class="container-fluid">
      <div class="navbar-header">
@@ -19,238 +13,46 @@
      </div>
   </div>
 </nav>
-<div class="col-sm-1"></div>
-<div class="col-sm-10">
+<div class="col-sm-10 col-sm-offset-1">
 <ul class="nav nav-tabs" role="tablist">
   <li role="presentation" id="tabAdm" class="active"><a href="#adm" aria-controls="adm" role="tab" data-toggle="tab">OpenAdm</a></li>
   <li role="presentation" id="tabNet"><a href="#net" aria-controls="net" role="tab" data-toggle="tab">OpenNet</a></li>
+  <li role="presentation" id="tabMininet"><a href="#mininet" aria-controls="mininet" role="tab" data-toggle="tab">Mininet</a></li>
 </ul>
 <div class="tab-content">
-  <div role="tabpanel" class="tab-pane active" id="adm" ><div id="openadm" style="height:300px"></div></div>
-  <div role="tabpanel" class="tab-pane" id="net"><div id="opennet" style="height:300px"></div></div>
-</div>
+
+  <div role="tabpanel" class="tab-pane active" id="adm" >
+    <div id="openadm" class="chart"></div>
+    <div class="col-sm-10 col-sm-offset-1 readme" >
+        <a href="https://github.com/dlinknctu/openadm"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/e7bbb0521b397edbd5fe43e7f760759336b5e05f/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f677265656e5f3030373230302e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_green_007200.png"></a>
+        <div id="admReadme"></div> 
+    </div>
+  </div>
+
+  <div role="tabpanel" class="tab-pane" id="net">
+    <div id="opennet" class="chart"></div>
+    <div class="col-sm-10 col-sm-offset-1 readme" >
+        <a href="https://github.com/dlinknctu/opennet">
+            <img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/e7bbb0521b397edbd5fe43e7f760759336b5e05f/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f677265656e5f3030373230302e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_green_007200.png">
+        </a>
+        <div id="netReadme"></div>
+    </div>
+  </div>
+
+  <div role="tabpanel" class="tab-pane" id="mininet">
+    <div id="mininetChart" class="chart"></div>
+    <div class="col-sm-10 col-sm-offset-1 readme" >
+        <a href="https://github.com/dlinknctu/opennet">
+            <img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/e7bbb0521b397edbd5fe43e7f760759336b5e05f/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f677265656e5f3030373230302e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_green_007200.png">
+        </a>
+        <div id="mininetReadme"></div>
+    </div>
+  </div>
+
 </div>
 </body>
 <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/echarts/2.2.7/echarts-all.js"></script>
+<script src="https://cdn.bootcss.com/echarts/2.2.7/echarts-all.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-<script>
-
-var adm_traffic = "https://dlinknctu.github.io/openadm/traffic.json";
-var adm_clone =  "https://dlinknctu.github.io/openadm/clone.json";
-var net_traffic = "https://dlinknctu.github.io/opennet/traffic.json";
-var net_clone =  "https://dlinknctu.github.io/opennet/clone.json";
-var netChart = echarts.init(document.getElementById('opennet')); 
-var admChart = echarts.init(document.getElementById('openadm'));  
-var admTrafficObj = null;
-var admCloneObj = null;
-var netTrafficObj = null;
-var netCloneObj = null;
-function parseDate(d) {
-  return new Date(d*1000);
-}
-function OpenAdm() {
-  
-  $.ajax({
-    type:'get',
-    url:adm_traffic,    
- 　　dataType:'text',
- 　　success:function(msg){  
-      admTrafficObj=JSON.parse(msg);   
-      for(i=0;i<admTrafficObj.length;i++)
-      {
-        admTrafficObj[i]["bucket"] = parseDate(admTrafficObj[i]["bucket"]);
-      }
-      setData(admTrafficObj,admCloneObj,admChart);      
- 　  },
-    error:function(){
-      alert('error');  
-    }  
-  });
-  $.ajax({
-    type:'get',  
-    url:adm_clone,    
-    dataType:'text', 
-    success:function(msg){  
-      admCloneObj=JSON.parse(msg); 
-      for(i=0;i<admCloneObj.length;i++)
-      {
-        admCloneObj[i]["bucket"] = parseDate(admCloneObj[i]["bucket"]);
-      }
-      setData(admTrafficObj,admCloneObj,admChart);
-    }
-  });
-}
-function OpenNet() {
-
-  $.ajax({
-    type:'get',  
-    url:net_traffic,    
-    dataType:'text', 
-    success:function(msg){  
-      netTrafficObj=JSON.parse(msg); 
-      for(i=0;i<netTrafficObj.length;i++)
-      {
-        netTrafficObj[i]["bucket"] = parseDate(netTrafficObj[i]["bucket"]);
-      }
-      setData(netTrafficObj,netCloneObj,netChart);
-    }
-  });
-  $.ajax({
-    type:'get',  
-    url:net_clone,    
-    dataType:'text', 
-    success:function(msg){  
-      netCloneObj=JSON.parse(msg); 
-      for(i=0;i<netCloneObj.length;i++)
-      {
-        netCloneObj[i]["bucket"] = parseDate(netCloneObj[i]["bucket"]);
-      }
-      setData(netTrafficObj,netCloneObj,netChart);
-    }
-  });
-}
-function setData(jsonTrafficData,jsonCloneData,myChart) {
-  option = {
-    tooltip : {
-        trigger: 'axis'
-    },
-    legend: {
-        data:[{
-          name:'Visitor',
-          textStyle:{fontSize:"18", color:'gray'}
-        },{
-          name:'Clone',
-          textStyle:{fontSize:"18", color:'gray'}
-        }]
-    },
-    toolbox: {
-        show : false,
-        feature : {
-            mark : {show: true},
-            dataZoom : {show: true},
-            dataView : {show: true},
-            magicType : {show: true, type: ['line', 'bar', 'stack', 'tiled']},
-            restore : {show: true},
-            saveAsImage : {show: true}
-        }
-    },
-    calculable : false,
-    dataZoom : {
-        show : true,
-        realtime : true,
-        start : 0,
-        end : 100
-    },
-    xAxis : [
-        {
-            axisLabel : {
-              textStyle:{fontSize:"18",color:'gray'}
-            },
-            type : 'category',
-            boundaryGap : false,
-            data : function (){
-                var list = [];
-                var temp = jsonTrafficData;
-                if(jsonTrafficData == null)
-                  temp = jsonCloneData;
-                for (i = 0; i < temp.length; i++) {
-                    d = temp[i]["bucket"];
-                    list.push(d.getFullYear()+"/"+(d.getMonth()+1)+"/"+d.getDate());
-                }
-                return list;
-            }()
-        }
-    ],
-    yAxis : [
-        {
-            splitLine : {
-              show : false
-            },
-            axisLabel : {
-              textStyle:{fontSize:"18",color:'gray'}
-            },
-            type : 'value',
-            position: 'left',
-            name:'Visitor',
-            nameTextStyle:{fontSize:"20"}            
-        },
-        {
-            splitLine : {
-              show : false
-            },
-            axisLabel : {
-              textStyle:{fontSize:"18",color:'gray'}
-            },
-            type : 'value',
-            position: 'right',
-            name:'Clone',
-            nameTextStyle:{fontSize:"20"}
-        }
-    ],
-    series : [
-        {
-            name:'Visitor',
-            type:'line',
-            data:function (){
-                var list = [];
-                temp = 0;               
-                if(jsonTrafficData == null)
-                  return list; 
-                for (i = 0; i < jsonTrafficData.length; i++) {
-                    d = temp + jsonTrafficData[i]["total"];
-                    temp = d;
-                    list.push(d);
-                }
-                return list;
-            }()
-        },
-        {
-            name:'Clone',
-            type:'line',
-            yAxisIndex: 1,
-            data:function (){
-                var list = [];
-                temp = 0;
-                if(jsonCloneData == null)
-                  return list;
-                for (i = 0; i < jsonCloneData.length; i++) {
-                    d = temp + jsonCloneData[i]["total"];
-                    temp = d ;
-                    list.push(d);
-                }
-                return list;
-            }()
-        }
-    ]
-  };
-  myChart.setOption(option);
-  myChart.setTheme("infographic");
-  return true;
-}       
-$(document).ready(function() {
-  OpenAdm();
-  OpenNet();
-});
-$('#tabNet a').click(function (e) {
-  setTimeout(function(){
-    netChart.resize();
-    setData(netTrafficObj,netCloneObj,netChart);
-  },100);
-  
-
-});
-$('#tabAdm a').click(function (e) {
-  setTimeout(function(){
-    admChart.resize();
-    setData(admTrafficObj,admCloneObj,admChart);
-  },100);
-});
-window.onresize = function(event) {
-    admChart.resize();
-    netChart.resize();
-};
-
-       
-
-</script>
+<script src="https://cdn.rawgit.com/showdownjs/showdown/1.2.3/dist/showdown.min.js"></script>
+<script src="./main.js"></script>
