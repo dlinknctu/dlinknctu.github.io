@@ -145,8 +145,28 @@
         "bucket": 1441929600
     }, 
     {
-        "unique": 5, 
-        "total": 19, 
+        "unique": 7, 
+        "total": 21, 
         "bucket": 1442016000
+    }, 
+    {
+        "total": 7, 
+        "unique": 4, 
+        "bucket": 1442102400
+    }, 
+    {
+        "total": 82, 
+        "unique": 15, 
+        "bucket": 1442188800
+    }, 
+    {
+        "unique": 11, 
+        "total": 97, 
+        "bucket": 1442275200
+    }, 
+    {
+        "unique": 19, 
+        "total": 41, 
+        "bucket": 1442361600
     }
 ]
