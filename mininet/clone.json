@@ -93,5 +93,60 @@
         "unique": 2, 
         "total": 2, 
         "bucket": 1442361600
+    }, 
+    {
+        "total": 1, 
+        "unique": 1, 
+        "bucket": 1442448000
+    }, 
+    {
+        "total": 0, 
+        "unique": 0, 
+        "bucket": 1442534400
+    }, 
+    {
+        "total": 1, 
+        "unique": 1, 
+        "bucket": 1442620800
+    }, 
+    {
+        "total": 1, 
+        "unique": 1, 
+        "bucket": 1442707200
+    }, 
+    {
+        "total": 0, 
+        "unique": 0, 
+        "bucket": 1442793600
+    }, 
+    {
+        "total": 1, 
+        "unique": 1, 
+        "bucket": 1442880000
+    }, 
+    {
+        "total": 1, 
+        "unique": 1, 
+        "bucket": 1442966400
+    }, 
+    {
+        "total": 0, 
+        "unique": 0, 
+        "bucket": 1443052800
+    }, 
+    {
+        "total": 1, 
+        "unique": 1, 
+        "bucket": 1443139200
+    }, 
+    {
+        "unique": 0, 
+        "total": 0, 
+        "bucket": 1443225600
+    }, 
+    {
+        "unique": 0, 
+        "total": 0, 
+        "bucket": 1443312000
     }
 ]
