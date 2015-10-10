@@ -198,5 +198,20 @@
         "unique": 0, 
         "total": 0, 
         "bucket": 1444176000
+    }, 
+    {
+        "total": 0, 
+        "unique": 0, 
+        "bucket": 1444262400
+    }, 
+    {
+        "total": 1, 
+        "unique": 1, 
+        "bucket": 1444348800
+    }, 
+    {
+        "total": 0, 
+        "unique": 0, 
+        "bucket": 1444435200
     }
 ]
