@@ -1025,8 +1025,78 @@
         "bucket": 1459123200
     }, 
     {
+        "unique": 1, 
+        "total": 2, 
+        "bucket": 1459209600
+    }, 
+    {
+        "total": 0, 
+        "unique": 0, 
+        "bucket": 1459296000
+    }, 
+    {
+        "total": 4, 
+        "unique": 3, 
+        "bucket": 1459382400
+    }, 
+    {
+        "total": 4, 
+        "unique": 3, 
+        "bucket": 1459468800
+    }, 
+    {
+        "total": 7, 
+        "unique": 3, 
+        "bucket": 1459555200
+    }, 
+    {
+        "total": 4, 
+        "unique": 3, 
+        "bucket": 1459641600
+    }, 
+    {
+        "total": 2, 
+        "unique": 2, 
+        "bucket": 1459728000
+    }, 
+    {
+        "total": 5, 
+        "unique": 3, 
+        "bucket": 1459814400
+    }, 
+    {
+        "unique": 10, 
+        "total": 14, 
+        "bucket": 1459900800
+    }, 
+    {
+        "unique": 4, 
+        "total": 5, 
+        "bucket": 1459987200
+    }, 
+    {
+        "unique": 4, 
+        "total": 4, 
+        "bucket": 1460073600
+    }, 
+    {
         "unique": 0, 
         "total": 0, 
-        "bucket": 1459209600
+        "bucket": 1460160000
+    }, 
+    {
+        "unique": 3, 
+        "total": 3, 
+        "bucket": 1460246400
+    }, 
+    {
+        "unique": 6, 
+        "total": 9, 
+        "bucket": 1460332800
+    }, 
+    {
+        "unique": 6, 
+        "total": 9, 
+        "bucket": 1460419200
     }
 ]
