@@ -1145,8 +1145,83 @@
         "bucket": 1461196800
     }, 
     {
-        "unique": 0, 
-        "total": 0, 
+        "unique": 1, 
+        "total": 7, 
         "bucket": 1461283200
+    }, 
+    {
+        "total": 0, 
+        "unique": 0, 
+        "bucket": 1461369600
+    }, 
+    {
+        "total": 4, 
+        "unique": 1, 
+        "bucket": 1461456000
+    }, 
+    {
+        "total": 29, 
+        "unique": 4, 
+        "bucket": 1461542400
+    }, 
+    {
+        "total": 0, 
+        "unique": 0, 
+        "bucket": 1461628800
+    }, 
+    {
+        "total": 14, 
+        "unique": 4, 
+        "bucket": 1461715200
+    }, 
+    {
+        "total": 7, 
+        "unique": 2, 
+        "bucket": 1461801600
+    }, 
+    {
+        "total": 2, 
+        "unique": 2, 
+        "bucket": 1461888000
+    }, 
+    {
+        "total": 0, 
+        "unique": 0, 
+        "bucket": 1461974400
+    }, 
+    {
+        "total": 3, 
+        "unique": 1, 
+        "bucket": 1462060800
+    }, 
+    {
+        "total": 30, 
+        "unique": 6, 
+        "bucket": 1462147200
+    }, 
+    {
+        "total": 6, 
+        "unique": 3, 
+        "bucket": 1462233600
+    }, 
+    {
+        "unique": 1, 
+        "total": 1, 
+        "bucket": 1462320000
+    }, 
+    {
+        "unique": 3, 
+        "total": 22, 
+        "bucket": 1462406400
+    }, 
+    {
+        "unique": 3, 
+        "total": 8, 
+        "bucket": 1462492800
+    }, 
+    {
+        "unique": 1, 
+        "total": 2, 
+        "bucket": 1462579200
     }
 ]

@@ -1145,8 +1145,83 @@
         "bucket": 1461196800
     }, 
     {
-        "unique": 9, 
-        "total": 33, 
+        "unique": 13, 
+        "total": 78, 
         "bucket": 1461283200
+    }, 
+    {
+        "total": 31, 
+        "unique": 17, 
+        "bucket": 1461369600
+    }, 
+    {
+        "total": 18, 
+        "unique": 8, 
+        "bucket": 1461456000
+    }, 
+    {
+        "total": 37, 
+        "unique": 11, 
+        "bucket": 1461542400
+    }, 
+    {
+        "total": 32, 
+        "unique": 13, 
+        "bucket": 1461628800
+    }, 
+    {
+        "total": 21, 
+        "unique": 15, 
+        "bucket": 1461715200
+    }, 
+    {
+        "total": 19, 
+        "unique": 10, 
+        "bucket": 1461801600
+    }, 
+    {
+        "total": 53, 
+        "unique": 8, 
+        "bucket": 1461888000
+    }, 
+    {
+        "total": 4, 
+        "unique": 4, 
+        "bucket": 1461974400
+    }, 
+    {
+        "total": 36, 
+        "unique": 6, 
+        "bucket": 1462060800
+    }, 
+    {
+        "total": 201, 
+        "unique": 20, 
+        "bucket": 1462147200
+    }, 
+    {
+        "total": 58, 
+        "unique": 12, 
+        "bucket": 1462233600
+    }, 
+    {
+        "unique": 13, 
+        "total": 31, 
+        "bucket": 1462320000
+    }, 
+    {
+        "unique": 12, 
+        "total": 59, 
+        "bucket": 1462406400
+    }, 
+    {
+        "unique": 16, 
+        "total": 37, 
+        "bucket": 1462492800
+    }, 
+    {
+        "unique": 9, 
+        "total": 18, 
+        "bucket": 1462579200
     }
 ]
